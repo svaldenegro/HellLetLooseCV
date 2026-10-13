@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)file:///C:/Users/svald/Documents/deepseek-harness/default-workspace/CV-HellLetLoose-U235-TOYOTA.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U235://TOYOTA.TK — CV Hell Let Loose</title>
+<style>
+  :root{
+    --bg:#0b0f0d;
+    --panel:#121815;
+    --panel-2:#161d19;
+    --line:#26302a;
+    --olive:#8a9a5b;
+    --brass:#c8a24a;
+    --blood:#a8412f;
+    --text:#dfe5dc;
+    --muted:#8b968c;
+    --mono:"JetBrains Mono","Cascadia Mono",Consolas,"SF Mono",Menlo,monospace;
+    --sans:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(circle at 15% -10%, #1b241d 0%, transparent 55%),
+      radial-gradient(circle at 90% 110%, #191f16 0%, transparent 50%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:34px 18px 60px;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:linear-gradient(rgba(138,154,91,.045) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(138,154,91,.045) 1px,transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%);
+  }
+  .sheet{position:relative;z-index:1;max-width:1020px;margin:0 auto}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:linear-gradient(150deg,#1a231c 0%,#111713 60%,#0d1210 100%);
+    border:1px solid var(--line);
+    border-left:4px solid var(--brass);
+    padding:34px 36px 30px;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"HLL";position:absolute;right:-14px;bottom:-46px;
+    font-family:var(--mono);font-size:150px;font-weight:800;letter-spacing:-8px;
+    color:rgba(200,162,74,.06);pointer-events:none;line-height:1;
+  }
+  .kicker{
+    font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--brass);margin:0 0 16px;
+  }
+  h1{
+    margin:0;font-size:clamp(30px,5.4vw,50px);line-height:1.02;letter-spacing:-1.4px;font-weight:800;
+  }
+  h1 .slash{color:var(--olive)}
+  h1 .tld{color:var(--muted);font-weight:600;font-size:.62em;letter-spacing:-.5px}
+  .role{
+    margin:14px 0 0;font-family:var(--mono);font-size:13px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--olive);
+  }
+  .motto{
+    margin:16px 0 0;max-width:56ch;color:var(--muted);font-style:italic;font-size:15px;
+    border-left:2px solid var(--line);padding-left:14px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;list-style:none;padding:0}
+  .chips li{
+    font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    border:1px solid var(--line);background:rgba(255,255,255,.02);
+    padding:6px 11px;color:var(--muted);border-radius:2px;
+  }
+  .chips li b{color:var(--text);font-weight:600}
+  .chips li.hot{border-color:rgba(200,162,74,.5);color:var(--brass)}
+  .chips li.hot b{color:var(--brass)}
+
+  /* ---------- SECTIONS ---------- */
+  section{margin-top:26px}
+  .sec-title{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:12px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--brass);margin:0 0 16px;
+  }
+  .sec-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  .card{
+    background:var(--panel);border:1px solid var(--line);padding:22px 24px;
+  }
+  .lead{margin:0;color:#c6cec4;font-size:15.5px}
+  .lead b{color:var(--text)}
+  .lead mark{background:rgba(200,162,74,.14);color:var(--brass);padding:1px 5px;border-radius:2px}
+
+  /* ---------- STAT GRID ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px}
+  .stat{
+    background:linear-gradient(160deg,var(--panel-2),#0f1411);
+    border:1px solid var(--line);border-top:2px solid var(--olive);
+    padding:16px 16px 14px;
+  }
+  .stat .n{font-family:var(--mono);font-size:27px;font-weight:700;letter-spacing:-1px;color:#fff;line-height:1}
+  .stat .n small{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0}
+  .stat .l{
+    margin-top:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .stat.gold{border-top-color:var(--brass)}
+  .stat.gold .n{color:var(--brass)}
+
+  /* ---------- ACHIEVEMENTS ---------- */
+  .medals{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .medal{
+    position:relative;background:var(--panel);border:1px solid var(--line);
+    padding:18px 20px 18px 22px;overflow:hidden;
+  }
+  .medal::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--brass)}
+  .medal.p2::before{background:var(--olive)}
+  .medal.p3::before{background:var(--blood)}
+  .medal .place{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  }
+  .medal h3{margin:7px 0 4px;font-size:17px;letter-spacing:-.2px}
+  .medal p{margin:0;color:var(--muted);font-size:13.5px}
+  .medal .big{
+    position:absolute;right:12px;top:6px;font-family:var(--mono);font-size:40px;font-weight:800;
+    color:rgba(255,255,255,.05);letter-spacing:-2px;
+  }
+
+  /* ---------- LISTS ---------- */
+  .doctrine{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+  .doctrine li{
+    display:grid;grid-template-columns:22px 1fr;gap:12px;
+    background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--olive);
+    padding:13px 16px;font-size:14.5px;color:#c6cec4;
+  }
+  .doctrine li span:first-child{font-family:var(--mono);color:var(--olive);font-size:12px;padding-top:3px}
+  .doctrine li b{color:var(--text)}
+
+  /* ---------- BARS ---------- */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:760px){.cols{grid-template-columns:1fr}}
+  .bar-row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin-bottom:13px}
+  .bar-row .k{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#cdd5cb}
+  .bar-row .v{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .bar{grid-column:1/-1;height:5px;background:#0a0e0c;border:1px solid #1d251f;position:relative;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--olive),#b6c47c)}
+  .bar.gold i{background:linear-gradient(90deg,#8a6f2c,var(--brass))}
+
+  /* ---------- TABLE ---------- */
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  caption{caption-side:top;text-align:left}
+  th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left}
+  thead th{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);border-bottom:1px solid #2f3b33;font-weight:600;
+  }
+  tbody tr:hover{background:rgba(138,154,91,.05)}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .hl{color:var(--brass);font-weight:600}
+  .dim{color:var(--muted)}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    margin-top:30px;padding:20px 24px;border:1px solid var(--line);background:var(--panel);
+    display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;justify-content:space-between;
+  }
+  footer .links{display:flex;gap:10px;flex-wrap:wrap}
+  footer a{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-decoration:none;
+    color:var(--brass);border:1px solid rgba(200,162,74,.4);padding:7px 12px;border-radius:2px;
+    transition:background .15s ease,color .15s ease;
+  }
+  footer a:hover{background:var(--brass);color:#12160f}
+  footer .sig{font-family:var(--mono);font-size:11px;color:#5f6a60;letter-spacing:.06em}
+
+  /* ---------- PRINT ---------- */
+  @media print{
+    :root{--bg:#fff;--panel:#fff;--panel-2:#fff;--line:#c9cfc7;--text:#141a15;--muted:#5b655c;--olive:#5c6b34;--brass:#8a6f2c}
+    body{background:#fff;color:var(--text);padding:0;font-size:11.5px}
+    body::before{display:none}
+    .sheet{max-width:none}
+    .hero{background:#fff;border-left-width:4px}
+    .hero::after{display:none}
+    .stat .n,.medal .big{color:var(--text)}
+    .medal .big{display:none}
+    section{margin-top:14px;break-inside:avoid}
+    .medal,.stat,.doctrine li,table,.cols{break-inside:avoid}
+    footer{background:#fff}
+    footer a{color:var(--text)}
+    @page{margin:14mm}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <p class="kicker">Dossier de combatiente · Hell Let Loose</p>
+    <h1>U235<span class="slash">://</span>TOYOTA<span class="tld">.TK</span></h1>
+    <p class="role">Infantería de línea · Machine Gunner · Commander</p>
+    <p class="motto">«El equipo primero. Las kills son una consecuencia, no el objetivo.»</p>
+    <ul class="chips">
+      <li>SteamID <b>76561198073903792</b></li>
+      <li class="hot">Nivel <b>276</b></li>
+      <li class="hot">Kill ELO <b>1863</b> · top 0,5% PC</li>
+      <li>K/D <b>2,13</b></li>
+      <li>Comp matches <b>143</b></li>
+      <li>Servicio <b>2025 – 2026</b></li>
+    </ul>
+  </header>
+
+  <section>
+    <h2 class="sec-title">Perfil operativo</h2>
+    <div class="card">
+      <p class="lead">
+        Jugador de <b>infantería</b> con más de <b>1.080 horas</b> en el frente y <b>143 partidas competitivas</b>
+        registradas. Mi rendimiento se construye sobre una idea simple:
+        <mark>ganar el punto, sostener la línea y habilitar al resto del escuadrón</mark>, no inflar el contador
+        personal. Asumo el rol que el equipo necesita en cada momento — fusilero de línea, ametrallador de
+        supresión o comandante de facción cuando la partida lo exige.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Estadísticas destacadas</h2>
+    <div class="stats">
+      <div class="stat gold"><div class="n">1863</div><div class="l">Kill ELO infantería · top 0,5% PC</div></div>
+      <div class="stat gold"><div class="n">2.13</div><div class="l">K/D global</div></div>
+      <div class="stat"><div class="n">35.816</div><div class="l">Bajas a enemigos · 0,53 KPM</div></div>
+      <div class="stat"><div class="n">143</div><div class="l">Partidas competitivas</div></div>
+      <div class="stat"><div class="n">1.080<small>+ h</small></div><div class="l">Tiempo de combate · 1.471 partidas</div></div>
+      <div class="stat"><div class="n">10</div><div class="l">Partidas con 100+ bajas</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Logros competitivos</h2>
+    <div class="medals">
+      <div class="medal p3">
+        <div class="big">03</div>
+        <p class="place">TNL</p>
+        <h3>3.er lugar</h3>
+        <p>Podio de torneo con el equipo.</p>
+      </div>
+      <div class="medal">
+        <div class="big">D1</div>
+        <p class="place">Hold The Line</p>
+        <h3>División 1</h3>
+        <p>Temporada completa en la máxima división de la liga.</p>
+      </div>
+      <div class="medal p2">
+        <div class="big">V</div>
+        <p class="place">Vanguarda</p>
+        <h3>Jugador de apoyo</h3>
+        <p>Convocado para reforzar al equipo en múltiples partidas oficiales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Filosofía de juego · Team first</h2>
+    <ul class="doctrine">
+      <li><span>01</span><span><b>El objetivo manda.</b> Un garrison destruido o un punto sostenido vale más que cualquier racha personal.</span></li>
+      <li><span>02</span><span><b>Supresión sobre estadística.</b> Con MG42 el trabajo es fijar al enemigo y abrir el avance del escuadrón, aunque el contador de bajas no lo refleje.</span></li>
+      <li><span>03</span><span><b>Rol según necesidad.</b> Juego lo que el equipo necesita: línea, apoyo de fuego o mando de facción.</span></li>
+      <li><span>04</span><span><b>Disciplina de comunicaciones.</b> Reportes claros, sin ruido en el canal de mando, respeto por SL y Commander.</span></li>
+      <li><span>05</span><span><b>Sacrificio táctico.</b> Ceder posición, kills o vehículo cuando eso asegura la defensa del punto.</span></li>
+      <li><span>06</span><span><b>Mentalidad de escuadrón.</b> Si el equipo gana el punto, la partida se ganó — el scoreboard viene después.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Desempeño · reparto de roles</h2>
+    <div class="card">
+      <div class="cols">
+        <div>
+          <div class="bar-row"><span class="k">INFANTERÍA</span><span class="v">80%</span><span class="bar"><i style="width:80%"></i></span></div>
+          <div class="bar-row"><span class="k">MACHINE GUNNER</span><span class="v">12%</span><span class="bar"><i style="width:12%"></i></span></div>
+          <div class="bar-row"><span class="k">COMMANDER</span><span class="v">5%</span><span class="bar"><i style="width:5%"></i></span></div>
+          <div class="bar-row"><span class="k">DURACIÓN MEDIA DE PARTIDA</span><span class="v">51 min · 70%</span><span class="bar gold"><i style="width:70%"></i></span></div>
+        </div>
+        <div>
+          <div class="bar-row"><span class="k">M1 GARAND</span><span class="v">34,79% · 12.462</span><span class="bar"><i style="width:100%"></i></span></div>
+          <div class="bar-row"><span class="k">GEWEHR 43</span><span class="v">19,77% · 7.082</span><span class="bar"><i style="width:57%"></i></span></div>
+          <div class="bar-row"><span class="k">MG42</span><span class="v">7,93% · 2.840</span><span class="bar"><i style="width:23%"></i></span></div>
+          <div class="bar-row"><span class="k">StG 44</span><span class="v">7,90% · 2.831</span><span class="bar"><i style="width:23%"></i></span></div>
+          <div class="bar-row"><span class="k">MP40</span><span class="v">5,49% · 1.967</span><span class="bar"><i style="width:16%"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Récords por rol</h2>
+    <div class="card" style="padding:6px 10px">
+      <table>
+        <thead>
+          <tr><th>Rol</th><th class="num">Máx. bajas en una partida</th><th>Servidor</th><th>Fecha</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Infantería</td><td class="num hl">130</td><td>URANIUM 1</td><td class="dim">18 May 2026</td></tr>
+          <tr><td>Machine Gun</td><td class="num hl">122</td><td>CONDOR 1</td><td class="dim">24 Feb 2026</td></tr>
+          <tr><td>Armor</td><td class="num">54</td><td>RONIN 2</td><td class="dim">19 Dec 2025</td></tr>
+          <tr><td>Sniper</td><td class="num">40</td><td>CONDOR 1</td><td class="dim">7 Feb 2026</td></tr>
+          <tr><td>Artillería</td><td class="num">14</td><td>CTM 1</td><td class="dim">9 Feb 2026</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Registro de servicio</h2>
+    <div class="card" style="padding:6px 10px">
+      <table>
+        <tbody>
+          <tr><td class="dim">Registro observado</td><td class="num">20 May 2025 – 12 Oct 2026</td></tr>
+          <tr><td class="dim">Partidas vistas / jugadas</td><td class="num">2.598+ · 1.285+ h &nbsp;/&nbsp; 1.471+ · 1.080+ h</td></tr>
+          <tr><td class="dim">Bajas a enemigos</td><td class="num">35.816 <span class="dim">(0,53 KPM)</span></td></tr>
+          <tr><td class="dim">Muertes totales</td><td class="num">16.786 <span class="dim">(0,25 DPM)</span></td></tr>
+          <tr><td class="dim">Win rate registrado</td><td class="num">42,65%</td></tr>
+          <tr><td class="dim">Facción preferida</td><td class="num">55% Eje / 45% Aliados</td></tr>
+          <tr><td class="dim">Modos de juego</td><td class="num">Warfare 1.393 · Offensive 71 · Skirmish 7</td></tr>
+          <tr><td class="dim">Mapas más jugados</td><td class="num">St. Mère Église 203 · Carentan 186 · Utah 176 · St. Marie du Mont 158 · Omaha 157</td></tr>
+          <tr><td class="dim">Servidores habituales</td><td class="num">RONIN 1 279 · URANIUM 1 224 · ASADO 1 152 · CONDOR 1 131 · 360 1 93</td></tr>
+          <tr><td class="dim">Mejor partida</td><td class="num hl">142 bajas · Kursk · MG42</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a href="https://hllrecords.com/profiles/76561198073903792">PERFIL HLLRECORDS</a>
+      <a href="https://steamcommunity.com/profiles/76561198073903792">STEAM</a>
+    </div>
+    <div class="sig">Datos del perfil público de HLLRecords · Disponible para scrims y comp.</div>
+  </footer>
+
+</div>
+
+
+</body></html>
